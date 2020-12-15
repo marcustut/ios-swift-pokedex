@@ -74,8 +74,8 @@ class PokemonListViewController: UITableViewController, UISearchBarDelegate {
         if segue.identifier == "ShowPokemonSegue",
                 let destination = segue.destination as? PokemonViewController,
                 let index = tableView.indexPathForSelectedRow?.row {
-            destination.url = pokemons[index].url
-            destination.pokemonIsCatched = UserDefaults.standard.bool(forKey: pokemons[index].name)
+            destination.url = searchResults[index].url
+            destination.pokemonIsCatched = UserDefaults.standard.bool(forKey: searchResults[index].name)
         }
     }
 }
